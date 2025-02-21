@@ -6,12 +6,32 @@ This is my personal Neovim configuration, designed for performance, customizatio
 
 ```
 ~/.config/nvim/
-├── init.lua             # Main Neovim configuration file
-├── lazy-lock.json       # Plugin lockfile (automatically managed)
+├── init.lua                     # Main Neovim configuration file
+├── lazy-lock.json               # Plugin lockfile (automatically managed)
+├── structurelua.txt             # Notes on the configuration structure
 ├── lua/
-│   ├── core/            # Core configurations (keymaps, options, etc.)
-│   ├── plugins/         # Plugin configurations (each plugin in a separate file)
-│   ├── README.md        # This file
+│   ├── core/                    # Core configurations
+│   │   ├── options.lua          # General options
+│   │   ├── keymaps.lua          # Key mappings
+│   │   ├── snippets.lua         # Snippets
+│   ├── plugins/                 # Individually configured plugins
+│   │   ├── init.lua             # Lazy.nvim management
+│   │   ├── neotree.lua          # Neo-tree configuration
+│   │   ├── colortheme.lua       # Color theme
+│   │   ├── bufferline.lua       # Bufferline
+│   │   ├── lualine.lua          # Lualine
+│   │   ├── treesitter.lua       # Treesitter
+│   │   ├── telescope.lua        # Telescope
+│   │   ├── lsp.lua              # LSP
+│   │   ├── autocompletion.lua   # Autocompletion
+│   │   ├── none-ls.lua          # Null-ls (linting and formatting)
+│   │   ├── gitsigns.lua         # Gitsigns
+│   │   ├── alpha.lua            # Alpha Dashboard
+│   │   ├── indent-blankline.lua # Indentation lines
+│   │   ├── comment.lua          # Comment plugin
+│   │   ├── image.lua            # Image viewer
+│   │   └── misc.lua             # Miscellaneous plugins
+│   ├── README.md                # This file
 ```
 
 ## 🔧 Installation
@@ -32,33 +52,3 @@ nvim
 
 ### **3️⃣ Restart Neovim**
 After the installation is complete, restart Neovim to apply all configurations.
-
----
-
-## 🚀 Features & Plugins
-
-### **🛠 Core Plugins**
-- **[Lazy.nvim](https://github.com/folke/lazy.nvim)** - Plugin manager
-- **[nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)** - File explorer
-- **[lualine](https://github.com/nvim-lualine/lualine.nvim)** - Status line
-- **[bufferline](https://github.com/akinsho/bufferline.nvim)** - Tab management
-- **[telescope](https://github.com/nvim-telescope/telescope.nvim)** - Fuzzy finder
-- **[treesitter](https://github.com/nvim-treesitter/nvim-treesitter)** - Syntax highlighting
-
-### **💻 LSP & Autocompletion**
-- **[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)** - LSP support
-- **[nvim-cmp](https://github.com/hrsh7th/nvim-cmp)** - Autocompletion
-- **[LuaSnip](https://github.com/L3MON4D3/LuaSnip)** - Snippets
-
-### **🎨 UI & Theming**
-- **[tokyonight.nvim](https://github.com/folke/tokyonight.nvim)** - Colorscheme
-- **[alpha-nvim](https://github.com/goolord/alpha-nvim)** - Dashboard
-- **[indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)** - Indentation guides
-
-### **🛡️ Code Formatting & Git**
-- **[null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)** - Linting & Formatting
-- **[gitsigns](https://github.com/lewis6991/gitsigns.nvim)** - Git integration
-
-### **📝 Miscellaneous**
-- **[comment.nvim](https://github.com/numToStr/Comment.nvim)** - Easy commenting
-- **[image.nvim](https://github.com/samodostal/image.nvim)** - Image viewer in Neovim
