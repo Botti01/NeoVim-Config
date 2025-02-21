@@ -6,12 +6,12 @@ This is my personal Neovim configuration, designed for performance, customizatio
 
 ```
 ~/.config/nvim/
-├── init.lua           # Main Neovim configuration file
-├── lazy-lock.json     # Plugin lockfile (automatically managed)
+├── init.lua             # Main Neovim configuration file
+├── lazy-lock.json       # Plugin lockfile (automatically managed)
 ├── lua/
-│   ├── core/             # Core configurations (keymaps, options, etc.)
-│   ├── plugins/          # Plugin configurations (each plugin in a separate file)
-│   ├── README.md         # This file
+│   ├── core/            # Core configurations (keymaps, options, etc.)
+│   ├── plugins/         # Plugin configurations (each plugin in a separate file)
+│   ├── README.md        # This file
 ```
 
 ## 🔧 Installation
