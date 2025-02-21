@@ -1,61 +1,64 @@
 # Neovim Configuration
 
-Questo repository contiene la mia configurazione personalizzata per Neovim, basata su **Lazy.nvim** per la gestione dei plugin.
+This is my personal Neovim configuration, designed for performance, customization, and an efficient workflow. It is built using **Lazy.nvim** as the plugin manager.
 
-## 📌 Caratteristiche principali
-- **Lazy.nvim** per la gestione efficiente dei plugin.
-- **Telescope** per la ricerca avanzata di file e contenuti.
-- **Treesitter** per un parsing avanzato del codice.
-- **LSP (Language Server Protocol)** per un supporto avanzato alla programmazione.
-- **Auto-completamento** con **nvim-cmp**.
-- **Linting & Formatting** con **null-ls**.
-- **Dashboard personalizzato** con **alpha-nvim**.
-- **Tema personalizzato** (Catppuccin/Tokyonight).
+## 📁 Directory Structure
 
-## 🚀 Installazione
-
-### 1️⃣ Clonare la configurazione
-```bash
-# Assicurati di avere Neovim installato
-rm -rf ~/.config/nvim  # (Opzionale) Rimuove la configurazione esistente
-
-git clone https://github.com/username/neovim-config.git ~/.config/nvim
-```
-
-### 2️⃣ Avviare Neovim e installare i plugin
-Apri Neovim ed esegui:
-```vim
-:Lazy sync
-```
-
-## 🔧 Struttura della Configurazione
-```
-~/.config/nvim/
-├── init.lua           # File principale di configurazione
+\`\`\`
+~/.config/nvim
+├── init.lua              # Main Neovim configuration file
+├── lazy-lock.json        # Plugin lockfile (automatically managed)
 ├── lua/
-│   ├── plugins/       # Cartella con i plugin separati per file
-│   ├── core/          # Configurazioni di base
-│   ├── mappings.lua   # Mappature personalizzate
-│   ├── options.lua    # Impostazioni di Neovim
-```
+│   ├── core/             # Core configurations (keymaps, options, etc.)
+│   ├── plugins/          # Plugin configurations (each plugin in a separate file)
+│   ├── README.md         # This file
+\`\`\`
 
-## 📜 Plugin Principali
-- **UI & Tema**: lualine, bufferline, tokyonight
-- **Navigazione**: telescope, nvim-tree
-- **Editing**: Treesitter, Comment.nvim, indent-blankline
-- **LSP & Completamento**: nvim-lspconfig, nvim-cmp, luasnip
-- **Utilities**: gitsigns, alpha-nvim, image.nvim
+## 🔧 Installation
 
-## 📌 Personalizzazione
-Puoi modificare la configurazione dei plugin modificando i file in `lua/plugins/`.
+### **1️⃣ Clone the Repository**
+First, make sure you have **Neovim (>= 0.9)** installed. Then, clone this repository into your Neovim configuration folder:
 
-## 🛠 Aggiornamenti
-Per aggiornare la configurazione:
-```bash
-cd ~/.config/nvim
-git pull
+\`\`\`bash
+git clone https://github.com/your-username/neovim-config.git ~/.config/nvim
+\`\`\`
+
+### **2️⃣ Open Neovim**
+Launch Neovim and Lazy.nvim will automatically install the plugins:
+
+\`\`\`bash
 nvim
-:Lazy sync
-```
+\`\`\`
 
+### **3️⃣ Restart Neovim**
+After the installation is complete, restart Neovim to apply all configurations.
 
+---
+
+## 🚀 Features & Plugins
+
+### **🛠 Core Plugins**
+- **[Lazy.nvim](https://github.com/folke/lazy.nvim)** - Plugin manager
+- **[nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)** - File explorer
+- **[lualine](https://github.com/nvim-lualine/lualine.nvim)** - Status line
+- **[bufferline](https://github.com/akinsho/bufferline.nvim)** - Tab management
+- **[telescope](https://github.com/nvim-telescope/telescope.nvim)** - Fuzzy finder
+- **[treesitter](https://github.com/nvim-treesitter/nvim-treesitter)** - Syntax highlighting
+
+### **💻 LSP & Autocompletion**
+- **[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)** - LSP support
+- **[nvim-cmp](https://github.com/hrsh7th/nvim-cmp)** - Autocompletion
+- **[LuaSnip](https://github.com/L3MON4D3/LuaSnip)** - Snippets
+
+### **🎨 UI & Theming**
+- **[tokyonight.nvim](https://github.com/folke/tokyonight.nvim)** - Colorscheme
+- **[alpha-nvim](https://github.com/goolord/alpha-nvim)** - Dashboard
+- **[indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)** - Indentation guides
+
+### **🛡️ Code Formatting & Git**
+- **[null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)** - Linting & Formatting
+- **[gitsigns](https://github.com/lewis6991/gitsigns.nvim)** - Git integration
+
+### **📝 Miscellaneous**
+- **[comment.nvim](https://github.com/numToStr/Comment.nvim)** - Easy commenting
+- **[image.nvim](https://github.com/samodostal/image.nvim)** - Image viewer in Neovim
