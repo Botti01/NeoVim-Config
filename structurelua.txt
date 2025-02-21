@@ -1,0 +1,25 @@
+~/.config/nvim/
+├── init.lua                 # File principale di Neovim
+├── lua/
+│   ├── core/                # Configurazioni di base
+│   │   ├── options.lua      # Opzioni generali
+│   │   ├── keymaps.lua      # Mappature dei tasti
+│   │   ├── snippets.lua     # Snippets
+│   ├── plugins/             # Plugin configurati singolarmente
+│   │   ├── init.lua         # Gestione Lazy.nvim
+│   │   ├── neotree.lua      # Configurazione Neo-tree
+│   │   ├── colortheme.lua   # Tema colori
+│   │   ├── bufferline.lua   # Bufferline
+│   │   ├── lualine.lua      # Lualine
+│   │   ├── treesitter.lua   # Treesitter
+│   │   ├── telescope.lua    # Telescope
+│   │   ├── lsp.lua          # LSP
+│   │   ├── autocompletion.lua # Completamento
+│   │   ├── none-ls.lua      # Null-ls (linting e formatting)
+│   │   ├── gitsigns.lua     # Gitsigns
+│   │   ├── alpha.lua        # Dashboard Alpha
+│   │   ├── indent-blankline.lua # Linee di indentazione
+│   │   ├── comment.lua      # Comment plugin
+│   │   ├── image.lua        # Visualizzazione immagini
+│   │   └── misc.lua         # Plugin vari
+
